@@ -1,7 +1,8 @@
 import os
 import psycopg2
 
-conn = psycopg2.connect("postgres://shuzzlvk:0MjvTNPiGgx_7GbJtBs5ABA4QKPFSuS6@peanut.db.elephantsql.com/shuzzlvk")
+conn_string = os.environ['CONNECTION_STRING']
+conn = psycopg2.connect(conn_string)
 
 # Open a cursor to perform database operations
 cur = conn.cursor()
