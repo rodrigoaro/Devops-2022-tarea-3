@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Movies {% endblock %}</h1>
+    {% for movie in movies %}
+        <div class='movie'>
+            <h3>#{{ movie[0] }} - {{ movie[1] }}</h3>
+            <i><p>({{ movie[2] }})</p></i>
+          <i><p>Director: {{ movie[3] }}</p></i>
+          <p class ="review"> {{ movie[5] }}</p>
+          <i><p>Rating: {{ movie[4] }} / 5</p></i>
+          <i><p>Added {{ movie[6] }}</p></i>
+        </div>
+    {% endfor %}
+{% endblock %}
