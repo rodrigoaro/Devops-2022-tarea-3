@@ -69,4 +69,37 @@ Detén el contendor:
     
 # Paso 2
     
+Vamos a crear un archivo docker-compose.yaml` con este contenido:
+
+```
+
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app
+    container_name: my-app
+    command: "bash ./runapp.sh"
+    environment:
+      - CONNECTION_STRING
+    expose:
+      - 8000
+    ports:
+      - "8080:8080"
+```
+
+Preocúpate de setear la variable de entorno `CONNECTION_STRING` con el valor de la url en ElephantSQL:
+
+    $ export CONNECTION_STRING=URL_DE_ELEPHANT
+    
+Copia la URL que usaste en tu Replit, si no tienes una pídele la URL al profesor:
+
+Luego ejecuta docker-compose de este modo:
+
+    $ docker-compose up --build
+    
+Si todo sale bien la aplicación va a estar disponible en el puerto 8080: http://127.0.0.1:8080/
 
