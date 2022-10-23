@@ -72,7 +72,6 @@ Detén el contendor:
 Vamos a crear un archivo docker-compose.yaml` con este contenido:
 
 ```
-
 version: "3"
 
 services:
@@ -102,4 +101,66 @@ Luego ejecuta docker-compose de este modo:
     $ docker-compose up --build
     
 Si todo sale bien la aplicación va a estar disponible en el puerto 8080: http://127.0.0.1:8080/
+
+# Paso 3
+
+Vamos a agregar un servicio para base datos, para esto modifica el archivo `docker-compose.yaml`.
+
+Debería quedar así:
+
+```
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app
+    container_name: my-app
+    command: "bash ./runapp.sh"
+    environment:
+      - CONNECTION_STRING
+    expose:
+      - 8000
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14-alpine
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_DB
+      - POSTGRES_PASSWORD
+    expose:
+      - "5432"
+```
+
+Con esto tenemos dos servicios: `app` y `db`. Nota que `app` depende de `db`.
+
+Ahora configura las variables: `POSTGRES_USER`, `POSTGRES_DB`y `POSTGRES_PASSWORD`:
+
+    $ export POSTGRES_USER=user
+    $ export POSTGRES_PASSWOR=pass
+    $ export POSTGRES_DB=movies
+    
+Por último modifica la variable de entorno `CONNECTION_STRING` para que use el servicio `db` que acabamos de definir:
+
+    $ export CONNECTION_STRING=postgres://user:pass@db/movies
+    
+
+Puedes cambiar los valores apra `user`, `pass` o `movies`. Pero debes preocuparte que el valor entre `@` y `/` sea `db` que es el nombre del servicio de base de datos.
+
+NOTA: si usas Mac debes setear esta variable de ambiente también:
+
+    export DOCKER_DEFAULT_PLATFORM=linux/amd64
+    
+Ahora, reinicia todo ejecutando:
+
+    $ docker-compose up -d --build
+    
+Si todo sale bien la aplicación va a estar disponible en el puerto 8080: http://127.0.0.1:8080/
+
 
