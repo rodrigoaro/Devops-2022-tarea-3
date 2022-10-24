@@ -123,7 +123,7 @@ services:
     environment:
       - CONNECTION_STRING
     expose:
-      - 8000
+      - 8080
     ports:
       - "8080:8080"
     depends_on:
