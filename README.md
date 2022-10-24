@@ -146,7 +146,7 @@ Con esto tenemos dos servicios: `app` y `db`. Nota que `app` depende de `db`.
 Ahora configura las variables: `POSTGRES_USER`, `POSTGRES_DB`y `POSTGRES_PASSWORD`:
 
     $ export POSTGRES_USER=user
-    $ export POSTGRES_PASSWOR=pass
+    $ export POSTGRES_PASSWORD=pass
     $ export POSTGRES_DB=movies
     
 Por último modifica la variable de entorno `CONNECTION_STRING` para que use el servicio `db` que acabamos de definir:
