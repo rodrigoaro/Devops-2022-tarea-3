@@ -163,4 +163,18 @@ Ahora, reinicia todo ejecutando:
     
 Si todo sale bien la aplicación va a estar disponible en el puerto 8080: http://127.0.0.1:8080/
 
+Ahora entra al container `postgres`:
+
+    $ docker exec -it postgres bash
+    
+Dentro del container postgres puedes revisar la base de datos:
+
+    $ psql -U user movies
+    bash-5.1# psql -U user movies
+    psql (14.5)
+    Type "help" for help.
+    movies=# select * from movies;
+    
+    
+
 
