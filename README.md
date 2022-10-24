@@ -52,7 +52,7 @@ Detén el contendor:
     
 # Paso 2
     
-Vamos a crear un archivo docker-compose.yaml` con este contenido:
+Vamos a crear un archivo `docker-compose.yaml` con este contenido:
 
 ```
 version: "3"
