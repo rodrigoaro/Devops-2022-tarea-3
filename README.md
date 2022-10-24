@@ -39,7 +39,7 @@ Ejecuta la imagen con este comando:
 
 Revisa que tu imagen está ejecutándose en un contenedor con el siguiente comando:
 
-    $ docker ps
+    $ docker ps -a
     
 Fíjate que docker le ha asignado un nombre a tu contendor (está debajo de la columna NAMES).
 
