@@ -43,24 +43,7 @@ Revisa que tu imagen está ejecutándose en un contenedor con el siguiente coman
     
 Fíjate que docker le ha asignado un nombre a tu contendor (está debajo de la columna NAMES).
 
-Puedes "entrar" al contenedor usando este comando:
 
-    $ docker exec -it NOMBRE_DEL_CONTENEDOR bash
-    
-Reemplaza NOMBRE_DEL_CONTENEDOR con el nombre que docker asigno a tu contenedor.
-
-Estando ahí puedes chequear que python está instalado en ese entorno:
-
-    $ python --version
-    
-O puedes revisar que el programa se encuentra inslado:
-
-    $ ls -l
-    
-Fíjate que además te encuentras en la carpeta `app`. 
-
-
-Para salir de esta sesión en el contenedor escribe `exit`.
 
 Detén el contendor:
 
@@ -98,9 +81,29 @@ Copia la URL que usaste en tu Replit, si no tienes una pídele la URL al profeso
 
 Luego ejecuta docker-compose de este modo:
 
-    $ docker-compose up --build
+    $ docker-compose up -d --build
     
 Si todo sale bien la aplicación va a estar disponible en el puerto 8080: http://127.0.0.1:8080/
+
+Puedes "entrar" al contenedor `app` usando este comando:
+
+    $ docker exec -it my-app bash
+    
+Fijate que `my-app` es el nombre que asignamos en el archivo `docker-compose.yaml`.
+
+Estando ahí puedes chequear que python está instalado en ese entorno:
+
+    $ python --version
+    
+O puedes revisar que el programa se encuentra inslado:
+
+    $ ls -l
+    
+Fíjate que además te encuentras en la carpeta `app`. 
+
+
+Para salir de esta sesión en el contenedor escribe `exit`.
+
 
 # Paso 3
 
