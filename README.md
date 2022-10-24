@@ -33,7 +33,7 @@ Deberías obtener el `IMAGE ID` de nuestra imagen que hemos creado.
 Ejecuta la imagen con este comando:
 
 
-    $ docker run app IMAGE_ID
+    $ docker run IMAGE_ID
     
 (Remplaza IMAGE_ID por el valor que obtuviste previamente.
 
