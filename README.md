@@ -190,8 +190,18 @@ Detén los contenedores:
     $ docker-compose down
     
 
+# Paso 4:
+
+Ejecuta el comando:
+    $ docker scan app
+    
+Es posible que te pida hacer un `login` a docker-hub, hazlo con tus credenciales.
+
+Revisa el reporte y comenta con tus compañeros luego revisa con el profesor.
+
 # Propuesto
 
 Averigua cómo agregar volúmenes persistentes al servicio db.
+
 
 
