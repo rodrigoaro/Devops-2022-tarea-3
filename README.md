@@ -174,7 +174,21 @@ Dentro del container postgres puedes revisar la base de datos:
     psql (14.5)
     Type "help" for help.
     movies=# select * from movies;
+    ....
     
+    movies=# \q
     
+    $ exit
+    
+Puedes tratar de agregar algunos registros a la tabla `movies`.
+
+Detén los contenedores:
+
+    $ docker-compose down
+    
+
+# Propuesto
+
+Averigua cómo agregar volúmenes persistentes al servicio db.
 
 
