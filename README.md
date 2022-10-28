@@ -9,6 +9,7 @@ Siga los pasos y deje sus resultados en su fork.
 Esta tarea se puede hacer en grupos, cada grupo debe tener a lo más 5 integrantes.
 
 En u-cursos hay una tarea, sube a la tarea un archivo con la url de la tarea y la lista de los integrantes del grupo.
+Alternativamente
 
 # Paso 1
 
@@ -29,6 +30,11 @@ Tips:
 - Basese en el ejercicio de docker-compose
 
 # Entrega
+
+|grupo|integrantes|url del fork|
+|-----|-----------|------------|
+
+
 
 
 
