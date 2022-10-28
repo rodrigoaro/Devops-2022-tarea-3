@@ -19,5 +19,14 @@ def index():
   cur.close()
   conn.close()
   return render_template('index.html', movies=movies)
-  
-app.run(host='0.0.0.0', port=8080)
+
+@app.route('/add')
+def add():
+  return render_template('form.html', action='/create', label='Agregar', post=None)
+
+@app.route('/create', methods=['POST'])
+def create():  
+  title  = request.form.get('title')
+  year = request.form.get('year')
+  return f"{title} - {year}"
+app.run(host='0.0.0.0', port=8080, debug=True)

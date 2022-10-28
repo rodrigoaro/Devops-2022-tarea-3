@@ -118,7 +118,7 @@ dotenv = ["python-dotenv"]
 
 [[package]]
 name = "flask-sqlalchemy"
-version = "3.0.0"
+version = "3.0.2"
 description = "Add SQLAlchemy support to your Flask application."
 category = "main"
 optional = false
@@ -268,8 +268,8 @@ testing = ["pytest-benchmark", "pytest"]
 dev = ["tox", "pre-commit"]
 
 [[package]]
-name = "psycopg2-binary"
-version = "2.9.4"
+name = "psycopg2"
+version = "2.9.5"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
 optional = false
@@ -409,7 +409,7 @@ dev = ["build (>=0.7.0)", "pytest-timeout (>=2.1.0)", "pytest (>=7.0.1)"]
 
 [[package]]
 name = "sqlalchemy"
-version = "1.4.41"
+version = "1.4.42"
 description = "Database Abstraction Library"
 category = "main"
 optional = false
@@ -541,7 +541,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "7cb041f762d56438c55aee0d1bc94834982801485ecc476b466fd30eae74fb34"
+content-hash = "c2fb11fe85b2abc76f39b980d31ccaf5028e7e8468b5f37035b0fa6e08d7fd6a"
 
 [metadata.files]
 aiohttp = []
@@ -568,7 +568,7 @@ numpy = []
 packaging = []
 parso = []
 pluggy = []
-psycopg2-binary = []
+psycopg2 = []
 pyflakes = []
 pyparsing = []
 python-lsp-jsonrpc = []

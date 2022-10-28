@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Movies {% endblock %}</h1>
+    <a id="add-movie" href="/add">Agregar Película</a>
     {% for movie in movies %}
         <div class='movie'>
-            <h3>#{{ movie[0] }} - {{ movie[1] }}</h3>
+            <h3>#{{ movie[0] }} - <a href="/edit/{{movie[0]}}">{{ movie[1] }}</a></h3>
             <i><p>({{ movie[2] }})</p></i>
           <i><p>Director: {{ movie[3] }}</p></i>
           <p class ="review"> {{ movie[5] }}</p>

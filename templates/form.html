@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} {{ label }} Película {% endblock %}</h1>
+    <form action="{{action}}" method="post" class="horizontal">
+      <div class="form-group">
+      <label for="title">Título:</label>
+      <input type="text" name="title" value="{{request.form['title'] or post['title']}}" class="form-control"></input>
+      </div>
+      <div class="form-group">
+      <label for="year">Año:</label>
+      <input type="text" name="year" value="{{request.form['year'] or post['year']}}" class="form-control"></input>
+      </div>
+      <div class="form-group">
+      <label for="director">Director:</label>
+      <input type="text" name="director" value="{{request.form['director'] or post['director']}}" class="form-control"></input>
+      </div>
+      <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="text" name="rating" value="{{request.form['rating'] or post['rating']}}" class="form-control"></input>
+      </div>
+      <div class="form-group">
+      <label for="rating">Crítica</label>
+      <textarea name ="review" class="form-control">
+        {{request.form['review'] or post['review']}}</textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Grabar" class="btn btn-primary"></input></div>
+    </form>
+
+{% endblock %}
