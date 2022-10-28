@@ -9,7 +9,7 @@ Siga los pasos y deje sus resultados en su fork.
 Esta tarea se puede hacer en grupos, cada grupo debe tener a lo más 5 integrantes.
 
 En u-cursos hay una tarea, sube a la tarea un archivo con la url de la tarea y la lista de los integrantes del grupo.
-Alternativamente
+Alternativamente, pueden hacer un pull request a este repo, incluyendo solamente el archivo README.md. En ese caso agregan los datos solicitados en la tabla que aparace debajo de **Entrega** al final de este documento.
 
 # Paso 1
 
@@ -33,6 +33,8 @@ Tips:
 
 |grupo|integrantes|url del fork|
 |-----|-----------|------------|
+|     |           |            |
+
 
 
 
