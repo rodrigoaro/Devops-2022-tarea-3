@@ -8,9 +8,22 @@ services:
     image: app
     container_name: my-app
     command: "bash ./runapp.sh"
+    environment:
+      - CONNECTION_STRING
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
 
   db:
+    image: postgres:14-alpine
     container_name: postgres
     restart: always
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_DB
+      - POSTGRES_PASSWORD
     expose:
       - "5432"
